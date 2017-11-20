@@ -28,10 +28,11 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
             {
                 HandleSystemMessage(activity);
             }
+
             return new HttpResponseMessage(System.Net.HttpStatusCode.Accepted);
         }
 
-        private Activity HandleSystemMessage(Activity message)
+        private static Activity HandleSystemMessage(IActivity message)
         {
             switch (message.Type)
             {

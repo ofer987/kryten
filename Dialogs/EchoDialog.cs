@@ -25,7 +25,7 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
         public async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
             var message = await argument;
-            await context.PostAsync("You said: " + message.Text);
+            await context.PostAsync($"It was said: ${message.Text}");
 
             context.Wait(MessageReceivedAsync);
         }
