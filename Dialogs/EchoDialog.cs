@@ -22,7 +22,7 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot.Dialogs
         public async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
             var message = await argument;
-            await context.PostAsync($"It was said: ${message.Text}");
+            await context.PostAsync($"It was said: {message.Text}");
 
             context.Wait(MessageReceivedAsync);
         }
